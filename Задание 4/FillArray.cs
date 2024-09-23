@@ -8,7 +8,6 @@
          fillArray.Start();
       }
 
-
       #region Точка входа в программу
       private void Start()
       {
@@ -19,7 +18,6 @@
          Console.WriteLine($"Сумма чисел массива равна: {SumArray(array)}");
       }
       #endregion
-
 
       #region Заполнение массива рандомными числами
       private int[] FillingArrayRandomNumbers(int count)
