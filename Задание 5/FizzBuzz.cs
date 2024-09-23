@@ -8,8 +8,6 @@
          fizzBuzz.Start();
       }
 
-
-
       #region Точка начала
       private void Start()
       {
