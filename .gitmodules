@@ -1,0 +1,15 @@
+[submodule "Задание 1"]
+	path = Задание 1
+	url = https://github.com/OnlyUp2219/GuessNumber.git
+[submodule "Задание 2"]
+	path = Задание 2
+	url = https://github.com/OnlyUp2219/ArithmeticMean.git
+[submodule "Задание 3"]
+	path = Задание 3
+	url = https://github.com/OnlyUp2219/Substrings.git
+[submodule "Задание 4"]
+	path = Задание 4
+	url = https://github.com/OnlyUp2219/FillArray.git
+[submodule "Задание 5"]
+	path = Задание 5
+	url = https://github.com/OnlyUp2219/FizzBuzz.git
