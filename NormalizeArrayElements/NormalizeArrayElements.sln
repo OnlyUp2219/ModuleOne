@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalizeArrayElements", "NormalizeArrayElements.csproj", "{135385CA-45D0-45AD-8629-BED94C4C9FC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{135385CA-45D0-45AD-8629-BED94C4C9FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135385CA-45D0-45AD-8629-BED94C4C9FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135385CA-45D0-45AD-8629-BED94C4C9FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135385CA-45D0-45AD-8629-BED94C4C9FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C46483DE-6303-4C23-9B6B-E76C454668E9}
+	EndGlobalSection
+EndGlobal
