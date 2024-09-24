@@ -22,8 +22,14 @@
          array = SetLenghtArray(array);
 
          // Заполнение элементов массива случайными значениями
-         Console.WriteLine("Массив заполнен!");
-         array = SetRandomElemArray(array);
+         Console.WriteLine("Введите диапазон заполнения!");
+         Console.WriteLine("Нижний = ");
+         int minValue;
+         int.TryParse(Console.ReadLine(), out minValue);
+         Console.WriteLine("Высший = ");
+         int maxValue;
+         int.TryParse(Console.ReadLine(), out maxValue);
+         array = SetRandomElemArray(array, minValue, maxValue);
 
          // Получение индекса максимального и минимального элемента
          int maxElem = GetMaxElemIndex(array);
@@ -57,7 +63,7 @@
          for (int i = 1; i < array.Length; i++)
          {
             // Проверка на максимальное значение
-            if (array[i] > maxEl)
+            if (array[i] < maxEl)
             {
                maxEl = array[i];
                maxIndex = i;
@@ -80,7 +86,7 @@
          for (int i = 1; i < array.Length; i++)
          {
             // Проверка на максимальное значение
-            if (array[i] < minEl)
+            if (array[i] > minEl)
             {
                minEl = array[i];
                minIndex = i;
@@ -104,19 +110,19 @@
          // Если maxIndex не задан, устанавливаем его равным длине массива
          if (maxIndex == -1)
          {
-            maxIndex = array.Length;
+            maxIndex = array.Length - 1;
          }
 
-         // Убедимся, что индексы в пределах массива
+         
          int i = Math.Max(0, Math.Min(minIndex, maxIndex));   // Минимум всегда должен быть >= 0
-         int j = Math.Min(array.Length, Math.Max(minIndex, maxIndex));   // Максимум не больше длины массива
+         int j = Math.Min(array.Length - 1, Math.Max(minIndex, maxIndex));   // Максимум не больше длины массива
 
          // Вывод каждого элемента массива от i до j
-         for (; i < j; i++)
+         for (; i <= j ; i++)
          {
             Console.Write(array[i] + " ");
          }
-         Console.WriteLine(); // Переход на новую строку для корректного вывода
+         Console.WriteLine(); 
       }
 
       /// <summary>
@@ -124,13 +130,13 @@
       /// </summary>
       /// <param name="array">Исходный массив</param>
       /// <returns>Заполненный массив случайными числами</returns>
-      private int[] SetRandomElemArray(int[] array)
+      private int[] SetRandomElemArray(int[] array, int minValue, int maxValue)
       {
          Random random = new Random();
 
          for (int i = 0; i < array.Length; i++)
          {
-            int randEl = random.Next(1, 10); // Генерация случайного числа от 1 до 10
+            int randEl = random.Next(minValue, maxValue);
             array[i] = randEl;
          }
          return array;
