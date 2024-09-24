@@ -1,4 +1,4 @@
-﻿namespace BinarySearch
+﻿namespace GuessNumber
 {
    internal class GuessNumber
    {
