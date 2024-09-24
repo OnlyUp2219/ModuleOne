@@ -13,3 +13,9 @@
 [submodule "Задание 5"]
 	path = Задание 5
 	url = https://github.com/OnlyUp2219/FizzBuzz.git
+[submodule "Задание 6"]
+	path = Задание 6
+[submodule "Задание 7"]
+	path = Задание 7
+[submodule "Задание 8"]
+	path = Задание 8

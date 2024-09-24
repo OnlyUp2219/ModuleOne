@@ -8,13 +8,15 @@
          arithmeticMean.Start();
       }
 
+      #region Точка входа в программу
       private void Start()
       {
          Console.WriteLine("Введите массив");
          int[] array = InputArray(3);
-         Console.WriteLine( $"Среднее арифмитическое: {ArithmeticMeanNumbers(array)}");
+         Console.WriteLine($"Среднее арифмитическое: {ArithmeticMeanNumbers(array)}");
 
       }
+      #endregion
 
       #region Ввод массива
       private int[] InputArray(int count)
@@ -26,7 +28,6 @@
             int.TryParse(Console.ReadLine(), out number);
             array[i] = number;
          }
-
          return array;
       }
       #endregion
@@ -36,15 +37,10 @@
       {
          int sum = 0;
          foreach (int i in array)
-             sum += i;
-
+            sum += i;
          float mean = sum / array.Length;
-
          return mean;
       }
       #endregion
-
-
    }
-
 }
