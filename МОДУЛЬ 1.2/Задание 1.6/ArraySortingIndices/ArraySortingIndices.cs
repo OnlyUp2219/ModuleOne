@@ -35,7 +35,7 @@ namespace ArraySortingIndices
          Console.WriteLine("Массив, отсортированный по значениям:");
          for (int i = 0; i < indexArray.Length; i++)
          {
-            Console.Write(array[indexArray[i]] + " ");
+            Console.Write("{0:0.###} ", array[indexArray[i]]);
          }
       }
 
@@ -100,7 +100,7 @@ namespace ArraySortingIndices
       {
          foreach (double value in array)
          {
-            Console.Write(value + " ");
+            Console.Write("{0:0.###} ", value);
          }
          Console.WriteLine();
       }
