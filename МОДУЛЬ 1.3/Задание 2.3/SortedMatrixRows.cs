@@ -10,6 +10,7 @@ namespace SortedMatrixRows
          sortedMatrixRows.Start();
       }
 
+      #region Начало программы
       private void Start()
       {
          // Ввод размерности квадратной матрицы
@@ -37,7 +38,8 @@ namespace SortedMatrixRows
 
          // Вывод суммы строк после сортировки
          GetValueSumRows(matrix);
-      }
+      } 
+      #endregion
 
       #region Методы ввода/вывода
 
