@@ -39,7 +39,7 @@ namespace SortedMatrixRows
          GetValueSumRows(matrix);
       }
 
-      #region Методы для работы с матрицей
+      #region Методы ввода/вывода
 
       // Метод для печати матрицы
       private void Print(int[,] matrix)
@@ -57,6 +57,25 @@ namespace SortedMatrixRows
          Console.Write("]");
          Console.WriteLine();
       }
+
+      // Метод для вывода суммы каждой строки матрицы
+      private void GetValueSumRows(int[,] matrix)
+      {
+         int sum = 0;
+         for (int i = 0; i < matrix.GetLength(0); i++)
+         {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+               sum += matrix[i, j];
+            }
+            Console.WriteLine($"Сумма строки[{i}] = {sum}");
+            sum = 0; // Сбрасываем сумму для следующей строки
+         }
+      }
+
+      #endregion
+
+      #region Методы для работы с матрицей
 
       // Метод для заполнения матрицы случайными значениями
       private int[,] SetElementMatrix(int[,] matrix)
@@ -86,20 +105,9 @@ namespace SortedMatrixRows
          return sumUnsorted;
       }
 
-      // Метод для вывода суммы каждой строки матрицы
-      private void GetValueSumRows(int[,] matrix)
-      {
-         int sum = 0;
-         for (int i = 0; i < matrix.GetLength(0); i++)
-         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-               sum += matrix[i, j];
-            }
-            Console.WriteLine($"Сумма строки[{i}] = {sum}");
-            sum = 0; // Сбрасываем сумму для следующей строки
-         }
-      }
+      #endregion
+
+      #region Методы сортировки
 
       // Метод для сортировки строк матрицы по возрастанию сумм их элементов
       private int[,] GetSortMatrixByRowSum(int[,] matrix)
